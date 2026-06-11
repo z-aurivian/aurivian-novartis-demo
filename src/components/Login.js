@@ -72,7 +72,7 @@ export default function Login({ onAuthenticated }) {
 
           {/* Sovereign deployment cue */}
           <div className="mt-6 pt-5 border-t border-auri-border flex items-center gap-2 text-xs text-auri-muted">
-            <Shield size={14} className="text-auri-blue" />
+            <Shield size={14} className="text-auri-text" />
             <span>
               Deployed inside <span className="text-auri-text font-medium">{CLIENT?.cloudLabel || 'your cloud'}</span>. Data never leaves your environment.
             </span>

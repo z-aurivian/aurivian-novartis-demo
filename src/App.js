@@ -123,7 +123,7 @@ function Shell() {
               <button
                 onClick={() => setProductDropdownOpen(!productDropdownOpen)}
                 title="Selecting a product scopes Auri's product context"
-                className="flex items-center gap-3 px-4 py-2 bg-auri-card border border-auri-border rounded-lg hover:border-auri-blue/50 transition-all"
+                className="flex items-center gap-3 px-4 py-2 bg-auri-card border border-auri-border rounded-lg hover:border-auri-text/50 transition-all"
               >
                 <div className="text-left">
                   <div className="text-sm font-semibold text-auri-text">{currentProduct?.name}</div>
@@ -162,7 +162,7 @@ function Shell() {
                   const c = CONGRESS_OPTIONS.find((x) => x.id === e.target.value);
                   if (c && (c.available || c.isTrend)) setSelectedCongress(c);
                 }}
-                className="px-3 py-2 rounded-lg text-sm font-medium bg-auri-card border border-auri-border text-auri-text focus:border-auri-blue focus:outline-none"
+                className="px-3 py-2 rounded-lg text-sm font-medium bg-auri-card border border-auri-border text-auri-text focus:border-auri-text focus:outline-none"
               >
                 {CONGRESS_OPTIONS.map((c) => (
                   <option key={c.id} value={c.id} disabled={!c.available && !c.isTrend}>
