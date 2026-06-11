@@ -454,16 +454,28 @@
 
   /* Audio bar */
   #audio-bar {
-    position: sticky;
-    bottom: 0;
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
     background: var(--paper-dk);
     border-top: 1px solid var(--rule);
     padding: 8px 16px;
-    display: flex;
     align-items: center;
     gap: 10px;
-    z-index: 50;
+    z-index: 500;
   }
+  #audio-bar.open { display: flex; }
+  .btn-listen {
+    display: flex; align-items: center; gap: 5px;
+    background: rgba(13,110,110,0.08); border: 1px solid var(--teal);
+    border-radius: 5px; padding: 5px 10px;
+    font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+    color: var(--teal); letter-spacing: 0.04em; cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-listen:hover { background: rgba(13,110,110,0.15); }
+  .btn-listen.playing { background: rgba(13,110,110,0.15); }
+  .listen-dot { width: 5px; height: 5px; background: var(--teal); border-radius: 50%; animation: pulse-anim 2s ease-in-out infinite; }
   #audio-bar .listen-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -821,6 +833,9 @@
     <span class="chip">Novartis Oncology</span>
     <span class="chip">Kisqali · Pluvicto · Scemblix</span>
   </div>
+  <button class="btn-listen" id="listen-btn" onclick="openAudio()">
+    <span class="listen-dot"></span>&#9654;&nbsp;Listen
+  </button>
 </div>
 
 <!-- Layout -->
@@ -1746,6 +1761,17 @@
   var playBtn = document.getElementById('play-btn');
   var fill = document.getElementById('audio-fill');
   var timeEl = document.getElementById('audio-time');
+
+  function openAudio() {
+    var bar = document.getElementById('audio-bar');
+    if (bar) bar.classList.add('open');
+    if (!audio) return;
+    audio.play().then(function() {
+      playBtn.innerHTML = '&#9646;&#9646; Pause';
+      var lb = document.getElementById('listen-btn');
+      if (lb) lb.classList.add('playing');
+    }).catch(function(e) { console.warn(e); });
+  }
 
   function togglePlay() {
     if (!audio) return;
