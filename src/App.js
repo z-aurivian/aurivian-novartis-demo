@@ -99,7 +99,7 @@ function Shell() {
                   className={({ isActive }) =>
                     `flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all shrink-0 ${
                       isActive
-                        ? 'bg-auri-blue/10 text-auri-blue'
+                        ? 'bg-auri-text text-auri-bg'
                         : 'text-auri-muted hover:text-auri-text hover:bg-auri-card'
                     }`
                   }
@@ -142,7 +142,7 @@ function Shell() {
                         setProductDropdownOpen(false);
                       }}
                       className={`w-full text-left px-4 py-3 hover:bg-auri-card transition-all ${
-                        selectedProduct === product.id ? 'bg-auri-blue/5 border-l-2 border-auri-blue' : ''
+                        selectedProduct === product.id ? 'border-l-4 border-auri-text bg-auri-offset' : ''
                       }`}
                     >
                       <div className="font-semibold text-sm text-auri-text">{product.name}</div>
@@ -207,7 +207,7 @@ function Shell() {
                 className={({ isActive }) =>
                   `flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all font-michroma tracking-wider ${
                     isActive
-                      ? 'bg-auri-blue/10 text-auri-blue'
+                      ? 'bg-auri-text text-auri-bg'
                       : 'text-auri-muted hover:text-auri-text hover:bg-auri-card'
                   }`
                 }
@@ -227,7 +227,7 @@ function Shell() {
                 className={({ isActive }) =>
                   `flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActive
-                      ? 'bg-auri-blue/10 text-auri-blue'
+                      ? 'bg-auri-text text-auri-bg'
                       : 'text-auri-muted hover:text-auri-text hover:bg-auri-card'
                   }`
                 }
