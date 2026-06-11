@@ -89,11 +89,11 @@ export default function CommandCenter() {
             value={directiveInput}
             onChange={(e) => setDirectiveInput(e.target.value)}
             placeholder='e.g. "Summarise the most important signals from the last congress cycle."'
-            className="flex-1 px-4 py-3 rounded-lg border border-auri-border bg-auri-card text-sm text-auri-text focus:outline-none focus:border-auri-blue"
+            className="flex-1 px-4 py-3 rounded-lg border border-auri-border bg-auri-card text-sm text-auri-text focus:outline-none focus:border-auri-text"
           />
           <button
             type="submit"
-            className="flex items-center gap-2 px-4 py-3 rounded-lg bg-auri-blue text-white text-sm font-medium hover:bg-auri-blue/90 transition-all"
+            className="flex items-center gap-2 px-4 py-3 rounded-lg bg-auri-text text-auri-bg text-sm font-medium hover:bg-auri-text/90 transition-all"
           >
             <Send size={16} />
             Direct
@@ -116,7 +116,7 @@ export default function CommandCenter() {
               >
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-auri-blue/10 text-auri-blue flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-auri-text/10 text-auri-text flex items-center justify-center">
                       <Icon size={20} />
                     </div>
                     <div>

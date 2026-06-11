@@ -33,7 +33,7 @@ export default function AuriSidebar({ selectedProduct }) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-3 rounded-full bg-auri-blue text-white shadow-lg hover:bg-auri-blue/90 transition-all"
+          className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-3 rounded-full bg-auri-text text-auri-bg shadow-lg hover:bg-auri-text/90 transition-all"
           aria-label="Open Auri chat"
         >
           <Sparkles size={18} />
