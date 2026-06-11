@@ -154,7 +154,7 @@ export default function AuriChatPanel({
               <div
                 className={`max-w-[85%] rounded-lg px-3 py-2.5 ${
                   msg.role === 'user'
-                    ? 'bg-auri-blue text-white'
+                    ? 'bg-auri-text text-auri-bg'
                     : 'bg-auri-card border border-auri-border text-auri-text'
                 }`}
               >
@@ -224,9 +224,9 @@ export default function AuriChatPanel({
           <button
             onClick={() => handleSend()}
             disabled={!input.trim() || isLoading}
-            className="px-3 py-2.5 bg-auri-blue rounded-lg hover:bg-blue-600 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+            className="px-3 py-2.5 bg-auri-text text-auri-bg rounded-lg hover:opacity-80 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
           >
-            <Send size={14} className="text-white" />
+            <Send size={14} />
           </button>
         </div>
       </div>
