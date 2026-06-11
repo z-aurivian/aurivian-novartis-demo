@@ -13,4 +13,5 @@ export const CLIENT = {
   logoSrc: null,
 };
 
-export const CAPTURE_APP_URL = 'https://aurivian-capture-demo.vercel.app';
+export const CAPTURE_APP_URL = null;
+export const PULSE_BRIEF_URL = '/pulse_novartis_brief.html';
